@@ -1,9 +1,9 @@
 pipeline {
-    agent { any { image 'node:8.11.3' } }
+    agent { docker { image 'php' } }
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'php --version'
             }
         }
     }
